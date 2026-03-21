@@ -9,7 +9,6 @@ from rich.console import Console
 console = Console()
 
 
-
 def main():
 	print('Hello from first-uv-app!')
 
