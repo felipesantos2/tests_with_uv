@@ -5,10 +5,23 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
-    "black>=26.3.1",
     "httpx>=0.28.1",
     "python-dotenv>=1.2.2",
     "requests>=2.32.5",
     "rich>=14.3.3",
-    "ruff>=0.15.7",
 ]
+
+[dependency-groups]
+dev = ["black>=26.3.1", "pytest>=9.0.2", "ruff>=0.15.7", "ty>=0.0.24"]
+
+[tool.ruff.format]
+preview = true
+quote-style = "single"
+indent-style = "tab"
+
+[tool.ruff.lint]
+preview = true
+extend-select = ["E303", "E305", "E306", "TID253", "E401"]
+
+[tool.ruff.lint.flake8-quotes]
+inline-quotes = "single"
