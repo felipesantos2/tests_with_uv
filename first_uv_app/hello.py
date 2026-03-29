@@ -23,7 +23,7 @@ providers: list = [
 
 @app.route('/')
 def home() -> str:
-	return utils.redirect(location, code=302, Response=None)¶
+	return utils.redirect(location, code=302, Response=None)
 
 
 @app.route('/providers')
